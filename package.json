@@ -1,0 +1,34 @@
+{
+    "name": "whatsappg",
+    "productName": "whatsappg",
+    "version": "1.0.0",
+    "description": "A non-official WhatsApp app.",
+    "main": "./src/index.js",
+    "scripts": {
+        "build": "electron-packager . whatsappg --platform linux --arch x64 --out dist/",
+        "deb64": "electron-installer-debian --src dist/whatsappg-linux-x64/ --dest dist/installers/ --arch amd64 --config build_config.json",
+        "start": "NODE_ENV=development electron ."
+    },
+    "license": "MIT",
+    "author": "Gustavo Rocha",
+    "lint-staged": {
+        "*.js": [
+            "eslint",
+            "prettier --write --ignore-unknown"
+        ]
+    },
+    "devDependencies": {
+        "electron": "13.2.0",
+        "electron-builder": "^22.9.1",
+        "electron-installer-debian": "^3.1.0",
+        "electron-packager": "^15.3.0",
+        "eslint": "^7.32.0",
+        "eslint-config-airbnb-base": "^14.2.1",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-import": "^2.24.0",
+        "eslint-plugin-prettier": "^3.4.0",
+        "husky": "^7.0.1",
+        "lint-staged": "^11.1.2",
+        "prettier": "^2.3.2"
+    }
+}

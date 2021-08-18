@@ -1,0 +1,9 @@
+{
+    "dest": "dist/installers/",
+    "icon": "resources/Icon.png",
+    "options": {
+        "name": "WhatsAppG",
+        "productName": "WhatsAppG",
+        "genericName": "WhatsAppG"
+    }
+}
